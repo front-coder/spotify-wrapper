@@ -15,7 +15,8 @@
         "build:watch": "npm run build -- --watch",
         "build:umd": "webpack --output-filename spotify-wrapper.umd.js",
         "build:umd:min": "webpack --output-filename spotify-wrapper.umd.min.js -p",
-        "build:all": "npm run build && npm run build:umd && npm run build:umd:min"
+        "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
+        "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
     },
     "nyc": {
         "functions": 80,
@@ -42,6 +43,7 @@
         "babel-preset-env": "^1.6.0",
         "babel-register": "^6.26.0",
         "chai": "^4.1.1",
+        "coveralls": "^2.13.1",
         "eslint": "^4.4.0",
         "eslint-config-airbnb-base": "^11.3.1",
         "eslint-plugin-import": "^2.7.0",
