@@ -2,7 +2,7 @@
     "name": "spotify-wrapper",
     "version": "0.0.2",
     "description": "A wrapper to work with Spotfy Web API",
-    "main": "src/index.js",
+    "main": "lib/index.js",
     "scripts": {
         "lint": "node_modules/.bin/eslint src/*.js",
         "prepush": "npm run lint && npm run test:coverage",
@@ -18,6 +18,10 @@
         "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
         "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
     },
+    "files":[
+        "dist",
+        "lib"
+    ],
     "nyc": {
         "functions": 80,
         "lines": 80,

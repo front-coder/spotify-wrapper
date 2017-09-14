@@ -1,13 +1,8 @@
 /* eslint-env browser */
-import API_URL from './config';
+import { API_URL, HEADERS } from './config';
 import toJSON from './utils';
 
-export const getAlbum = id => fetch(`${API_URL}/albums/${id}?market=ES`, {
-  method: 'get',
-  headers: {
-    Authorization: 'Bearer BQBThlSmJGpSpxh7vM6YFhIJU5bK8bIDN4ibEZGIZDdL0cTQO8OgXGXNnugZbjpUWM8NORjualwj3LtToCwvurj-IcZlyy0X9x0Y81RCxfzl-DyOuotkOfvsW6Kv_vlhwXVEfME7GcI',
-  },
-})
+export const getAlbum = id => fetch(`${API_URL}/albums/${id}?market=ES`, HEADERS)
   .then(data => toJSON(data));
 
 export const getAlbums = ids => fetch(`${API_URL}/albums/?ids=${ids}`)

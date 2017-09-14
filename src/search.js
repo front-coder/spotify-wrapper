@@ -1,14 +1,9 @@
 /* eslint-env browser */
-import API_URL from './config';
+import { API_URL, HEADERS } from './config';
 import toJSON from './utils';
 
-export const search = (query, type) => fetch(`${API_URL}/search?q=${query}&type=${type}`,
-  {
-    method: 'get',
-    headers: {
-      Authorization: 'Bearer BQBThlSmJGpSpxh7vM6YFhIJU5bK8bIDN4ibEZGIZDdL0cTQO8OgXGXNnugZbjpUWM8NORjualwj3LtToCwvurj-IcZlyy0X9x0Y81RCxfzl-DyOuotkOfvsW6Kv_vlhwXVEfME7GcI',
-    },
-  }).then(data => toJSON(data));
+export const search = (query, type) => fetch(`${API_URL}/search?q=${query}&type=${type}`, HEADERS)
+  .then(data => toJSON(data));
 
 export const searchArtists = (query) => {
   search(query, 'artist');
