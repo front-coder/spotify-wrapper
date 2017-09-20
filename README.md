@@ -221,8 +221,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-| ![Front Coder](https://avatars2.githubusercontent.com/u/3991845?v=3&s=150)|
-|:---------------------:|
 |  [Front Coder](https://github.com/front-coder/)   |
 
 See also the list of [contributors](https://github.com/front-coder/spotify-wrapper/contributors) who participated in this project.
